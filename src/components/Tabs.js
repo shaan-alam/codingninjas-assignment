@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { NavLink, useLocation, useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 
 const Tabs = () => {
-  const location = useLocation();
   const { event_category } = useParams();
 
   return (

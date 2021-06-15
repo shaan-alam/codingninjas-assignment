@@ -9,17 +9,17 @@ function App() {
   const history = useHistory();
   useEffect(() => {
     history.push("/all_events/Upcoming");
-  }, []);
+  }, [history]);
 
   return (
     <Section>
       <Navbar />
       <Header />
       <div className="circuit">
-        <img src="./images/circuit.svg" />
+        <img src="./images/circuit.svg" alt="Circuit" />
       </div>
       <div className="gradient">
-        <img src="./images/gradient.svg" />
+        <img src="./images/gradient.svg" alt="gradient" />
       </div>
       <Events />
     </Section>

@@ -1,12 +1,10 @@
 import styled from "styled-components";
-import { Switch, Route, NavLink, useParams } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import CardContainer from "./CardContainer";
 import Tabs from "./Tabs";
 import SubTabs from "./SubTabs";
 
 const EventsBodyContainer = () => {
-  const { event_category, event_sub_category } = useParams();
-
   return (
     <>
       <Tabs />

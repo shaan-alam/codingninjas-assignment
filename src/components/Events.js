@@ -1,19 +1,6 @@
-import { useEffect } from "react";
 import styled from "styled-components";
-import Card from "./Card";
-import Cards from "./Cards";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  NavLink,
-  Link,
-  Redirect,
-} from "react-router-dom";
-import CardContainer from "./CardContainer";
-import queryString from "query-string";
+import { Switch, Route } from "react-router-dom";
 import EventsBodyContainer from "./EventsBodyContainer";
-import Tabs from "./Tabs";
 
 const Events = () => {
   return (

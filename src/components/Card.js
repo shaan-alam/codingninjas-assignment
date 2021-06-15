@@ -41,6 +41,7 @@ const Card = ({ event }) => {
                 <img
                   key={user.image_url}
                   src={user.image_url ? user.image_url : "/images/user.png"}
+                  alt={user.name}
                 />
               ))}
             </div>

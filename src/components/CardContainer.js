@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { useLocation } from "react-router-dom";
-import queryString from "query-string";
-import { Switch, Route, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Cards from "./Cards";
 import TopLoader from "react-top-loader";
 
