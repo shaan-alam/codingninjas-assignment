@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background: #032d6b;
+}
+
 .top-loader {
   background: #ff9e69 !important;
   height: 3px !important;

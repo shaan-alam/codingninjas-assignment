@@ -6,7 +6,7 @@ const Navbar = () => {
       <NavContainer>
         <MiddleHeader>
           <div className="logo">
-            <img src="./images/logo.svg" alt="Logo" />
+            <img src="/images/logo.svg" alt="Logo" />
           </div>
           <div className="menu">
             <ul>

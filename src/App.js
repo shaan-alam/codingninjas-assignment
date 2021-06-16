@@ -1,27 +1,27 @@
 import { useEffect } from "react";
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import Events from "./components/Events";
+import Header from "./components/Header/index";
+import Events from "./components/Events/index";
 import { useHistory } from "react-router-dom";
 
 function App() {
   const history = useHistory();
   useEffect(() => {
-    history.push("/all_events/Upcoming");
+    history.push("/all_events/Upcoming?tag_list=");
   }, [history]);
 
   return (
     <Section>
       <Navbar />
       <Header />
+      <Events />
       <div className="circuit">
-        <img src="./images/circuit.svg" alt="Circuit" />
+        <img src="/images/circuit.svg" alt="Circuit" />
       </div>
       <div className="gradient">
-        <img src="./images/gradient.svg" alt="gradient" />
+        <img src="/images/gradient.svg" alt="Gradient" />
       </div>
-      <Events />
     </Section>
   );
 }
@@ -30,7 +30,6 @@ export default App;
 
 const Section = styled.section`
   background: #032d6b;
-  height: auto;
   position: relative;
 
   .circuit {

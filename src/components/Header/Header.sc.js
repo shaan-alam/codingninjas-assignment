@@ -1,28 +1,13 @@
 import styled from "styled-components";
 
-const Header = () => {
-  return (
-    <HeaderContainer>
-      <Heading>
-        <h1>Events & News</h1>
-      </Heading>
-      <SubHeading>
-        <h3>Learn, Compete and Grow</h3>
-      </SubHeading>
-    </HeaderContainer>
-  );
-};
-
-export default Header;
-
-const HeaderContainer = styled.div`
+export const HeaderContainer = styled.div`
   width: 80%;
   margin: auto;
   padding: 3em 0;
   position: relative;
 `;
 
-const Heading = styled.div`
+export const Heading = styled.div`
   margin-bottom: 8px;
   width: 100%;
 
@@ -35,7 +20,7 @@ const Heading = styled.div`
   }
 `;
 
-const SubHeading = styled.div`
+export const SubHeading = styled.div`
   h3 {
     color: #fff;
     font-family: Mulish, Roboto, Helvetica Neue, sans-serif;
