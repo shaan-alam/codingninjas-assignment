@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { LinksWrapper, LinksContainer } from "./Links.sc";
 
 const Links = () => {

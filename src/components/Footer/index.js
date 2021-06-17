@@ -1,12 +1,9 @@
-import styled from "styled-components";
 import {
   LogoInstagram,
   LogoFacebook,
   LogoYoutube,
   LogoTwitter,
   LogoLinkedin,
-  LogoTelegram,
-  LogoCall,
 } from "react-ionicons";
 import { FooterWrapper, Container, Grid, Col } from "./Footer.sc";
 
@@ -103,7 +100,6 @@ const Footer = () => {
               <a href="#!">
                 <LogoLinkedin color="#fff" />
               </a>
-              <a href="#!"></a>
             </div>
             <div className="contacts">
               <h4>Contact Us</h4>
