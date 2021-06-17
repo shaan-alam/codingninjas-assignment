@@ -15,6 +15,8 @@ const CardContainer = ({ match }) => {
     const { tag_list } = queryString.parse(search);
     const URL = `https://api.codingninjas.com/api/v3/events?event_category=${event_category?.toUpperCase()}&event_sub_category=${event_sub_category}&tag_list=${tag_list}&offset=`;
 
+    console.log(URL);
+
     setIsLoading(true);
     fetch(URL)
       .then((res) => res.json())

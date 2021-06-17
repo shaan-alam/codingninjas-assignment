@@ -48,12 +48,25 @@ const Navbar = () => {
           </div>
           <div className="menu">
             <ul className={`${active ? "active" : ""}`}>
-              <li>Home</li>
-              <li>Courses</li>
-              <li>Practice</li>
-              <li>Events</li>
-              <li>Campus Ninjas</li>
-              <li>Blog</li>
+              <li>
+                <a href="#!">Home</a>
+              </li>
+
+              <li>
+                <a href="#!">Courses</a>
+              </li>
+              <li>
+                <a href="#!">Practice</a>
+              </li>
+              <li>
+                <a href="#!">Events</a>
+              </li>
+              <li>
+                <a href="#!">Campus Ninjas</a>
+              </li>
+              <li>
+                <a href="#!">Blog</a>
+              </li>
               <li>
                 <button className="enroll-btn">Enroll Now</button>
               </li>

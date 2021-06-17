@@ -144,13 +144,16 @@ export const MiddleHeader = styled.div`
       }
 
       li {
-        color: #fff;
-        padding: 15px;
-        height: 55px;
         font-size: 12px;
-        font-family: Mulish, Roboto, Helvetica Neue, sans-serif;
         margin-right: 20px;
-        cursor: pointer;
+
+        a {
+          height: 55px;
+          color: #fff;
+          padding: 15px;
+          font-family: Mulish, Roboto, Helvetica Neue, sans-serif;
+          text-decoration: none;
+        }
 
         button {
           display: none;
@@ -160,7 +163,7 @@ export const MiddleHeader = styled.div`
           margin: 20px 0;
         }
 
-        :hover {
+        a:not(button):hover {
           border-image-slice: 1;
           border-style: solid;
           border-width: 0 0 4px;
