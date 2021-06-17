@@ -176,7 +176,7 @@ const MiddleHeader = styled.div`
 
       li {
         color: #fff;
-        font-size: 0.8em;
+        font-size: 12px;
         font-family: Mulish, Roboto, Helvetica Neue, sans-serif;
         margin-right: 20px;
         cursor: pointer;
