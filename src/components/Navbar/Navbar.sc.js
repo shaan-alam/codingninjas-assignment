@@ -1,66 +1,4 @@
-import { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
-
-const Navbar = () => {
-  const [active, setActive] = useState(false);
-  const [sticky, setSticky] = useState({ sticky: false, offset: 0 });
-  const navRef = useRef();
-
-  const handleScroll = (elTopOffset, elHeight) => {
-    if (window.pageYOffset > elTopOffset + elHeight) {
-      setSticky({ sticky: true, offset: elHeight });
-    } else {
-      setSticky({ sticky: false, offset: 0 });
-    }
-  };
-
-  useEffect(() => {
-    var nav = navRef.current.getBoundingClientRect();
-
-    const handleScrollEvent = () => {
-      handleScroll(nav.top, nav.height);
-    };
-
-    window.addEventListener("scroll", handleScrollEvent);
-
-    return () => {
-      window.removeEventListener("scroll", handleScrollEvent);
-    };
-  }, [sticky]);
-
-  return (
-    <Nav className={`navbar ${sticky.sticky ? "sticky" : ""}`} ref={navRef}>
-      <NavContainer>
-        <Bars active={active} onClick={() => setActive(!active)}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </Bars>
-        <MiddleHeader>
-          <div className="logo">
-            <img src="/images/logo.svg" alt="Logo" />
-          </div>
-          <div className="menu">
-            <ul className={`${active ? "active" : ""}`}>
-              <li>Home</li>
-              <li>Courses</li>
-              <li>Practice</li>
-              <li>Events</li>
-              <li>Campus Ninjas</li>
-              <li>Blog</li>
-            </ul>
-          </div>
-        </MiddleHeader>
-        <RightContent>
-          <button className="login-btn">Login</button>
-          <button className="enroll-btn">Enroll Now</button>
-        </RightContent>
-      </NavContainer>
-    </Nav>
-  );
-};
-
-export default Navbar;
 
 export const Nav = styled.nav`
   width: 100%;
@@ -134,12 +72,33 @@ export const NavContainer = styled.div`
   margin: auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  .enroll-btn {
+    background-image: linear-gradient(270deg, #f96b24, #ff9100);
+    color: #fff;
+    height: fit-content;
+    font-family: "Roboto", sans-serif;
+    min-height: 32px;
+    padding: 10px 24px;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    width: 130px;
+    font-family: Mulish, Roboto, Helvetica Neue, sans-serif;
+
+    :hover {
+      background-image: linear-gradient(450deg, #f96b24, #ff9100);
+    }
+  }
 `;
 
-const MiddleHeader = styled.div`
+export const MiddleHeader = styled.div`
   display: flex;
   align-items: center;
   flex: 1;
+
   .logo {
     img {
       width: 70px;
@@ -153,6 +112,7 @@ const MiddleHeader = styled.div`
       display: flex;
       width: 100%;
       justify-content: space-between;
+      align-items: center;
       list-style: none;
 
       @media screen and (max-width: 850px) {
@@ -172,29 +132,52 @@ const MiddleHeader = styled.div`
           background: #2f154c;
           transition: all 0.4s;
         }
+
+        li {
+          width: fit-content;
+          height: 40px;
+
+          button {
+            display: block;
+          }
+        }
       }
 
       li {
         color: #fff;
+        padding: 15px;
+        height: 55px;
         font-size: 12px;
         font-family: Mulish, Roboto, Helvetica Neue, sans-serif;
         margin-right: 20px;
         cursor: pointer;
 
+        button {
+          display: none;
+        }
+
         @media screen and (max-width: 850px) {
           margin: 20px 0;
+        }
+
+        :hover {
+          border-image-slice: 1;
+          border-style: solid;
+          border-width: 0 0 4px;
+          border-image-source: linear-gradient(90deg, #fa7328, #ee9f15);
         }
       }
     }
   }
 `;
 
-const RightContent = styled.div`
+export const RightContent = styled.div`
   display: flex;
   justify-content: space-between;
 
   .login-btn {
     cursor: pointer;
+    height: fit-content;
     line-height: 22px;
     margin-right: 8px;
     font-weight: 600;
@@ -212,24 +195,7 @@ const RightContent = styled.div`
       background: #fdc7a9;
     }
   }
-
   .enroll-btn {
-    background-image: linear-gradient(270deg, #f96b24, #ff9100);
-    color: #fff;
-    font-family: "Roboto", sans-serif;
-    min-height: 32px;
-    padding: 8px 24px;
-    border: 0;
-    border-radius: 6px;
-    cursor: pointer;
-    display: inline-block;
-    width: 130px;
-    font-family: Mulish, Roboto, Helvetica Neue, sans-serif;
-
-    :hover {
-      background-image: linear-gradient(450deg, #f96b24, #ff9100);
-    }
-
     @media screen and (max-width: 850px) {
       display: none;
     }

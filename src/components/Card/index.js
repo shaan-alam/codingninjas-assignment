@@ -25,7 +25,9 @@ const Card = ({ event }) => {
   }, [setIsDateInPast, event_sub_category]);
 
   return (
-    <CardContainer>
+    <CardContainer
+      href={`https://www.codingninjas.com/v2/events/${event.slug}`}
+    >
       <CardCover>
         {event.mobile_cover_picture !== null ? (
           <img src={event.mobile_cover_picture} alt={event.name} />
@@ -41,7 +43,7 @@ const Card = ({ event }) => {
           <div>
             <p>Starts on</p>
             <p>
-              <Moment format="D MMM YYYY">{event.event_start_time}</Moment>
+              <Moment format="D MMM YYYY">{event.start_time}</Moment>
             </p>
           </div>
           <div>
@@ -69,7 +71,12 @@ const Card = ({ event }) => {
               {event.registered_users.top_users.map((user) => (
                 <img
                   key={v4()}
-                  src={user.image_url ? user.image_url : "/images/user.png"}
+                  src={
+                    user.image_url !== null
+                      ? user.image_url
+                      : "/images/user.png"
+                  }
+                  onError={(e) => (e.target.src = "/images/user.png")}
                   alt={user.name}
                 />
               ))}
@@ -84,7 +91,12 @@ const Card = ({ event }) => {
         )}
         {!isDateInPast && (
           <div className="register-link">
-            <a href="#!">Register Now</a>
+            <a
+              href={`https://www.codingninjas.com/v2/events/${event.slug}`}
+              href="#!"
+            >
+              Register Now
+            </a>
           </div>
         )}
       </CardFooter>

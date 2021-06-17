@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
+  text-decoration: none;
   height: fit-content;
   background: #fff;
   border-radius: 5px;

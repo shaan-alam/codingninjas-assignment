@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import styled from "styled-components";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/index";
 import Header from "./components/Header/index";
 import Events from "./components/Events/index";
 import { useHistory } from "react-router-dom";
