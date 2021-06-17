@@ -91,10 +91,7 @@ const Card = ({ event }) => {
         )}
         {!isDateInPast && (
           <div className="register-link">
-            <a
-              href={`https://www.codingninjas.com/v2/events/${event.slug}`}
-              href="#!"
-            >
+            <a href={`https://www.codingninjas.com/v2/events/${event.slug}`}>
               Register Now
             </a>
           </div>
