@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Navbar from "./components/Navbar/index";
 import Header from "./components/Header/index";
 import Events from "./components/Events/index";
+import Footer from "./components/Footer";
 import { useHistory } from "react-router-dom";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <div className="gradient">
         <img src="/images/gradient.svg" alt="Gradient" />
       </div>
+      <Footer />
     </Section>
   );
 }
