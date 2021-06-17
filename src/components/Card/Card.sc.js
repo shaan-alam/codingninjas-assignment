@@ -1,10 +1,7 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  width: 50%;
-  flex: 1 1 0;
   height: fit-content;
-  margin: 18px;
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 1px 19px 0 rgba(0, 0, 0, 0.07);
@@ -18,6 +15,13 @@ export const CardCover = styled.div`
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     width: 100%;
+  }
+
+  .glass-cover {
+    background: linear-gradient(-180deg, rgba(3, 3, 3, 0), #010101);
+    opacity: 0.16;
+    width: 100%;
+    height: 140px;
   }
 `;
 

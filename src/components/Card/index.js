@@ -1,6 +1,7 @@
+import { useState, useEffect } from "react";
 import Moment from "react-moment";
 import { v4 } from "uuid";
-
+import { useParams } from "react-router-dom";
 import {
   CardContainer,
   CardCover,
@@ -14,10 +15,23 @@ import {
 } from "./Card.sc";
 
 const Card = ({ event }) => {
+  const [isDateInPast, setIsDateInPast] = useState(false);
+  const { event_sub_category } = useParams();
+
+  useEffect(() => {
+    if (event_sub_category === "Archived") {
+      setIsDateInPast(true);
+    }
+  }, [setIsDateInPast, event_sub_category]);
+
   return (
     <CardContainer>
       <CardCover>
-        <img src={event.mobile_cover_picture} alt={event.name} />
+        {event.mobile_cover_picture !== null ? (
+          <img src={event.mobile_cover_picture} alt={event.name} />
+        ) : (
+          <div className="glass-cover"></div>
+        )}
       </CardCover>
       <CardContent>
         <CardHeading>
@@ -68,9 +82,11 @@ const Card = ({ event }) => {
             </div>
           </div>
         )}
-        <div className="register-link">
-          <a href="#!">Register Now</a>
-        </div>
+        {!isDateInPast && (
+          <div className="register-link">
+            <a href="#!">Register Now</a>
+          </div>
+        )}
       </CardFooter>
     </CardContainer>
   );

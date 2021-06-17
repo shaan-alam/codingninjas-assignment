@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const EventsCardContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 18px;
 `;
 
 export const EventError = styled.div`

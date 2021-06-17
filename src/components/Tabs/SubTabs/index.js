@@ -7,19 +7,19 @@ const SubTabs = () => {
   return (
     <SubCategories>
       <SubCategory
-        to={`/${event_category}/Upcoming`}
+        to={`/${event_category}/Upcoming?tag_list=`}
         active={event_sub_category === "Upcoming"}
       >
         Upcoming
       </SubCategory>
       <SubCategory
-        to={`/${event_category}/Archived`}
+        to={`/${event_category}/Archived?tag_list=`}
         active={event_sub_category === "Archived"}
       >
         Archived
       </SubCategory>
       <SubCategory
-        to={`/${event_category}/ALL_TIME_FAVORITES`}
+        to={`/${event_category}/ALL_TIME_FAVORITES?tag_list=`}
         active={event_sub_category === "ALL_TIME_FAVORITES"}
       >
         All Time Favourite
