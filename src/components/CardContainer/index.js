@@ -22,7 +22,6 @@ const CardContainer = ({ match }) => {
       .then((res) => {
         setEvents(res.data.events);
         setIsLoading(false);
-        console.log(URL, events);
       });
   }, [event_category, event_sub_category, search]);
 
