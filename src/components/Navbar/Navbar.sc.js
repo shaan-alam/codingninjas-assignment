@@ -126,7 +126,7 @@ export const MiddleHeader = styled.div`
           position: absolute;
           top: 100%;
           left: 0;
-          height: 80vh;
+          height: 100vh;
           justify-content: flex-start;
           padding: 30px;
           background: #2f154c;
