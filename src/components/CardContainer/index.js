@@ -16,11 +16,13 @@ const CardContainer = ({ match }) => {
     const URL = `https://api.codingninjas.com/api/v3/events?event_category=${event_category?.toUpperCase()}&event_sub_category=${event_sub_category}&tag_list=${tag_list}&offset=`;
 
     setIsLoading(true);
+
     fetch(URL)
       .then((res) => res.json())
       .then((res) => {
         setEvents(res.data.events);
         setIsLoading(false);
+        console.log(URL, events);
       });
   }, [event_category, event_sub_category, search]);
 

@@ -21,12 +21,12 @@ const Tabs = () => {
         All Events
       </Tab>
       <Tab
-        to="/webinars/Upcoming/?tag_list="
-        active={event_category === "webinars"}
+        to="/webinar/Upcoming/?tag_list="
+        active={event_category === "webinar"}
       >
         <img
           src={`/images/${
-            event_category === "webinars"
+            event_category === "webinar"
               ? "webinar-selected"
               : "webinar-unselected"
           }.svg`}
@@ -35,12 +35,12 @@ const Tabs = () => {
         Webinars
       </Tab>
       <Tab
-        to="/coding_events/Upcoming/?tag_list="
-        active={event_category === "coding_events"}
+        to="/coding_event/Upcoming/?tag_list="
+        active={event_category === "coding_event"}
       >
         <img
           src={`/images/${
-            event_category === "coding_events"
+            event_category === "coding_event"
               ? "coding-events-selected"
               : "coding-events-unselected"
           }.svg`}
@@ -49,12 +49,12 @@ const Tabs = () => {
         CodingEvents
       </Tab>
       <Tab
-        to="/bootcamp_events/Upcoming/?tag_list="
-        active={event_category === "bootcamp_events"}
+        to="/bootcamp_event/Upcoming/?tag_list="
+        active={event_category === "bootcamp_event"}
       >
         <img
           src={`/images/${
-            event_category === "bootcamp_events"
+            event_category === "bootcamp_event"
               ? "bootcamp_events_selected"
               : "bootcamp_events_unselected"
           }.png`}
